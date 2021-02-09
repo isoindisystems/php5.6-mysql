@@ -2,6 +2,9 @@ FROM ubuntu:xenial
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+EXPOSE 8000/udp
+EXPOSE 8000/tcp
+
 # Install basics
 RUN apt-get update
 RUN apt-get install -y software-properties-common && \
