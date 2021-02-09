@@ -8,7 +8,7 @@ EXPOSE 8000/tcp
 # Install basics
 RUN apt-get update
 RUN apt-get install -y software-properties-common && \
-    add-apt-repository ppa:ondrej/php && apt-get update
+    LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && apt-get update
 RUN apt-get install -y --force-yes curl git
 
 # Install MySQL
